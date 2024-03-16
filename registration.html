@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>SEMOCAPP - Registration</title>
+    <!-- CSS files -->
+    <link href="assets/dist/css/tabler.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/tabler-flags.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/tabler-payments.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/tabler-vendors.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/demo.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="assets/dist/css/style.css">
+</head>
+
+<body class=" d-flex flex-column">
+    <script src="assets/dist/js/demo-theme.min.js"></script>
+    <div class="page page-center">
+        <div class="container container-tight py-4">
+            <div class="text-center">
+                <a href="/" class="navbar-brand navbar-brand-autodark">
+                    <img src="/assets/logo/health_care.svg" alt="" width="300">
+                </a>
+            </div>
+            <form class="card card-md" autocomplete="off" novalidate>
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4" id="titleRegistrasi">Pendaftaran Akun Baru</h2>
+                    <div class="mb-3">
+                        <label class="form-label">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="full_name" name="full_name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Alamat Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <div class="input-group mb-2">
+                            <input type="password" class="form-control " autocomplete="off" id="password"
+                                name="password">
+                            <span class="input-group-text">
+                                <a href="#" class="link-secondary" id="showPassword">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                        <path
+                                            d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Konfirmasi Password</label>
+                        <div class="input-group mb-2">
+                            <input type="password" class="form-control" autocomplete="off" id="password_confirmation"
+                                name="password_confirmation">
+                            <span class="input-group-text">
+                                <a href="#" class="link-secondary" id="showPasswordConfirmation">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                        <path
+                                            d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <a href="index.html" class="btn btn-primary w-100" id="btnRegistrasi">Daftar Akun</a>
+                    </div>
+                </div>
+            </form>
+            <div class="text-center text-secondary mt-3">
+                Yuk login kalau sudah punya akun? <a href="/index.html">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabler Core -->
+    <script src="assets/dist/js/tabler.min.js" defer></script>
+    <script src="assets/dist/js/demo.min.js" defer></script>
+    <!-- Libs JS -->
+    <script src="assets/dist/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main_auth.js"></script>
+
+</body>
+
+</html>

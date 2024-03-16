@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>SEMOCAPP - Login</title>
+    <!-- CSS files -->
+    <link href="assets/dist/css/tabler.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/tabler-flags.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/tabler-payments.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/tabler-vendors.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/demo.min.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="assets/dist/css/style.css">
+</head>
+
+<body class=" d-flex flex-column">
+    <script src="assets/dist/js/demo-theme.min.js"></script>
+    <div class="page page-center">
+        <div class="container container-tight py-4">
+            <div class="text-center">
+                <a href="/" class="navbar-brand navbar-brand-autodark">
+                    <img src="/assets/logo/health_care.svg" alt="" width="300">
+                </a>
+            </div>
+            <div class="card card-md">
+                <div class="card-body">
+                    <h2 class="card-title h2 text-center mb-4 font-weight-bold" id="titleLogin">Login</h2>
+                    <form autocomplete="off" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" autocomplete="off">
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Password</label>
+                            <div class="input-group mb-2">
+                                <input type="password" class="form-control " autocomplete="off" id="password"
+                                    name="password">
+                                <span class="input-group-text">
+                                    <a href="#" class="link-secondary" id="showPassword">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                            <path
+                                                d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="form-footer">
+                            <a href="user/verification_user.html" class="btn btn-primary w-100" id="btnLogin">Masuk</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center text-secondary mt-3">
+                Sudah punya akun belum? <a href="/registration.html">Daftar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabler Core -->
+    <script src="assets/dist/js/tabler.min.js" defer></script>
+    <script src="assets/dist/js/demo.min.js" defer></script>
+    <!-- Libs JS -->
+    <script src="assets/dist/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main_auth.js"></script>
+
+</body>
+
+</html>
