@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SEMOCAPP - Dashboard</title>
+    <!-- CSS files -->
+    <link href="../assets/dist/css/tabler.min.css?1692870487" rel="stylesheet" />
+    <link href="../assets/dist/css/tabler-flags.min.css?1692870487" rel="stylesheet" />
+    <link href="../assets/dist/css/tabler-payments.min.css?1692870487" rel="stylesheet" />
+    <link href="../assets/dist/css/tabler-vendors.min.css?1692870487" rel="stylesheet" />
+    <link href="../assets/dist/css/demo.min.css?1692870487" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/dist/css/style.css">
+    <style>
+        /* CSS untuk menyesuaikan tampilan acara */
+        .fc-event-icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../assets/dist/js/demo-theme.min.js?1692870487"></script>
+    <div class="page">
+        <!-- Navbar -->
+        <header class="navbar navbar-expand-md d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu"
+                    aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href=".">
+                        <img src="../assets/logo/health_care.svg" width="110" height="32" alt="Tabler"
+                            class="navbar-brand-image">
+                    </a>
+                </h1>
+                <div class="navbar-nav flex-row order-md-last ">
+                    <div class="d-none d-md-flex 5">
+                        <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                            </svg>
+                        </a>
+                        <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                <path
+                                    d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+                            aria-label="Open user menu">
+                            <!-- <span class="avatar avatar-sm"
+                                style="background-image: url(../assets/static/avatars/000m.jpg)"></span> -->
+                            <span class="avatar avatar-md">SA</span>
+                            <div class="d-none d-xl-block ps-2">
+                                <div>Siti Ayu</div>
+                                <div class="mt-1 small text-secondary">Ibu Hamil</div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                            <a href="#" class="dropdown-item">Status</a>
+                            <a href="#" class="dropdown-item">Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="../index.html" class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="navbar-expand-md">
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <div class="navbar">
+                    <div class="container-xl">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="dashboard.html">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                                            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                                        </svg>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        Home
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/anc-visits.html">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-heart">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
+                                            <path
+                                                d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+                                            <path
+                                                d="M11.993 16.75l2.747 -2.815a1.9 1.9 0 0 0 0 -2.632a1.775 1.775 0 0 0 -2.56 0l-.183 .188l-.183 -.189a1.775 1.775 0 0 0 -2.56 0a1.899 1.899 0 0 0 0 2.632l2.738 2.825z" />
+                                        </svg>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        Kunjungan ANC
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/consultation.html">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-message">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M8 9h8" />
+                                            <path d="M8 13h6" />
+                                            <path
+                                                d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                        </svg>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        Konsultasi
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/user/pregnant-women-supplement.html">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-pill">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M4.5 12.5l8 -8a4.94 4.94 0 0 1 7 7l-8 8a4.94 4.94 0 0 1 -7 -7" />
+                                            <path d="M8.5 8.5l7 7" />
+                                        </svg>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        Minum TTD
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/pregnant-mother-education.html">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-books">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" />
+                                            <path
+                                                d="M9 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" />
+                                            <path d="M5 8h4" />
+                                            <path d="M9 16h4" />
+                                            <path
+                                                d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041z" />
+                                            <path d="M14 9l4 -1" />
+                                            <path d="M16 16l3.923 -.98" />
+                                        </svg>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        Edukasi Ibu Hamil
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="page-wrapper">
+            <div class="page-header">
+                <div class="container-xl">
+                    <div class="row g-2 align-items-center">
+                        <div class="col">
+                            <div class="page-title">Minum Tablet Tambah Darah</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page body -->
+            <div class="page-body">
+                <div class="container-xl d-flex flex-column justify-content-center">
+                    <div class="card p-3 mb-3">
+                        <div id='calendar'></div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer footer-transparent d-print-none">
+                <div class="container-xl">
+                    <div class="row text-center align-items-center flex-row-reverse">
+                        <div class="col-lg-auto ms-lg-auto">
+                            <ul class="list-inline list-inline-dots mb-0">
+                                <li class="list-inline-item">
+                                    Develop By
+                                    <a href="https://github.com/fauzanagra" target="_blank" class="link-secondary"
+                                        rel="noopener">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-brand-github" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                                        </svg>
+                                        Fauzan Agra
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                            <ul class="list-inline list-inline-dots mb-0">
+                                <li class="list-inline-item">
+                                    Copyright &copy; 2024
+                                    <a href="#" class="link-secondary">
+                                        SEMOCAPP Puskesmas
+                                        Rowosari
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="." class="link-secondary" rel="noopener">
+                                        v1.0.0
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Libs JS -->
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Tabler Core -->
+    <script src="../assets/dist/js/tabler.min.js?1692870487" defer></script>
+    <script src="../assets/dist/js/demo.min.js?1692870487" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                defaultView: 'dayGridMonth',
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth'
+                },
+                events: [
+                    {
+                        title: 'Belum Minum',
+                        start: '2024-03-13',
+                        backgroundColor: '#D63939'
+                    },
+                    {
+                        title: 'Sudah Minum',
+                        start: '2024-03-14',
+                        backgroundColor: '#2FB344'
+                    },
+                    {
+                        title: 'Sudah Minum',
+                        start: '2024-03-15',
+                        backgroundColor: '#2FB344'
+                    },
+                    {
+                        title: 'Belum Minum',
+                        start: '2024-03-16',
+                        backgroundColor: '#D63939'
+                    },
+                    {
+                        title: 'Belum Minum',
+                        start: '2024-03-17',
+                        backgroundColor: '#206BC4'
+                    }
+                ],
+                eventClick: function (info) {
+                    var today = new Date();
+                    var clickedDate = info.event.start;
+                    if (clickedDate.getDate() === today.getDate() &&
+                        clickedDate.getMonth() === today.getMonth() &&
+                        clickedDate.getFullYear() === today.getFullYear()) {
+                        Swal.fire({
+                            icon: "question",
+                            text: "Apakah anda sudah minum obat Penambah Darah hari ini?",
+                            confirmButtonColor: "#2FB344",
+                            cancelButtonColor: "#d33",
+                            confirmButtonText: "Sudah",
+                            cancelButtonText: "Belum",
+                            showCancelButton: true
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // Jika pengguna mengonfirmasi, ubah warna acara menjadi hijau dan tampilkan pesan sukses
+                                info.event.setProp('backgroundColor', '#2FB344'); // Mengubah warna latar belakang menjadi hijau
+                                Swal.fire({
+                                    position: "center",
+                                    icon: "success",
+                                    showConfirmButton: false,
+                                    timer: 1500,
+                                    text: "Terima Kasih sudah minum obatnya",
+                                });
+                            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                                // Jika pengguna membatalkan, tidak ada tindakan yang diambil
+                                // Namun, Anda bisa menampilkan pesan peringatan dan mendorong untuk minum obat
+                                Swal.fire({
+                                    position: "center",
+                                    icon: "warning",
+                                    showConfirmButton: false,
+                                    timer: 2000,
+                                    text: "Jangan lupa hari ini untuk minum obatnya ya",
+                                });
+                                // Anda juga bisa mengatur ulang warna acara kembali ke warna biru
+                                info.event.setProp('backgroundColor', '#007bff'); // Mengatur warna latar belakang menjadi biru
+                            }
+                        });
+                    }
+                }
+            });
+            calendar.render();
+        });
+
+    </script>
+
+</body>
+
+</html>
