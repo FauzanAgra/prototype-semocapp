@@ -31,7 +31,40 @@
             </div>
             <div class="card card-md">
                 <div class="card-body">
+
                     <h2 class="card-title h2 text-center mb-4 font-weight-bold" id="titleLogin">Login</h2>
+                    <div class="alert alert-success" role="alert">
+                        <div class="d-flex">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon alert-icon" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M5 12l5 5l10 -10"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="alert-title">User</h4>
+                                <div class="text-secondary">user@gmail.com - password</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                        <div class="d-flex">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon alert-icon" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M5 12l5 5l10 -10"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="alert-title">Bidan</h4>
+                                <div class="text-secondary">bidan@gmail.com - password</div>
+                            </div>
+                        </div>
+                    </div>
                     <form autocomplete="off" novalidate>
                         <div class="mb-3">
                             <label class="form-label">Email</label>
@@ -55,10 +88,9 @@
                                     </a>
                                 </span>
                             </div>
-
                         </div>
                         <div class="form-footer">
-                            <a href="user/verification-user.html" class="btn btn-primary w-100" id="btnLogin">Masuk</a>
+                            <button type="button" class="btn btn-primary w-100" id="btnLogin">Masuk</button>
                         </div>
                     </form>
                 </div>
@@ -75,7 +107,23 @@
     <!-- Libs JS -->
     <script src="assets/dist/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/main_auth.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            $('#btnLogin').on('click', function (e) {
+                e.preventDefault();
+                var email = $('#email').val();
+                var password = $('#password').val();
 
+                if (email === 'bidan@gmail.com' && password === 'password') {
+                    window.location.href = 'nakes/dashboard.html';
+                } else if (email === 'user@gmail.com' && password === 'password') {
+                    window.location.href = "user/verification-user.html";
+                } else {
+                    window.location.href = "index.html";
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
