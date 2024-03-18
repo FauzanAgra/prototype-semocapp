@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SEMOCAPP - Dashboard</title>
+    <!-- CSS files -->
+    <link href="../assets/dist/css/tabler.min.css?1692870487" rel="stylesheet" />
+    <link href="../assets/dist/css/tabler-flags.min.css?1692870487" rel="stylesheet" />
+    <link href="../assets/dist/css/tabler-payments.min.css?1692870487" rel="stylesheet" />
+    <link href="../assets/dist/css/tabler-vendors.min.css?1692870487" rel="stylesheet" />
+    <link href="../assets/dist/css/demo.min.css?1692870487" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/dist/css/style.css">
+    <style>
+        /* CSS untuk menyesuaikan tampilan acara */
+        .fc-event-icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../assets/dist/js/demo-theme.min.js?1692870487"></script>
+    <div class="page">
+        <!-- Navbar -->
+        <header class="navbar navbar-expand-md d-print-none">
+            <div class="container-xl">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu"
+                    aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                    <a href=".">
+                        <img src="../assets/logo/health_care.svg" width="110" height="32" alt="Tabler"
+                            class="navbar-brand-image">
+                    </a>
+                </h1>
+                <div class="navbar-nav flex-row order-md-last ">
+                    <div class="d-none d-md-flex 5">
+                        <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                            </svg>
+                        </a>
+                        <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Enable light mode"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                <path
+                                    d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+                            aria-label="Open user menu">
+                            <!-- <span class="avatar avatar-sm"
+                                style="background-image: url(../assets/static/avatars/000m.jpg)"></span> -->
+                            <span class="avatar avatar-md">SA</span>
+                            <div class="d-none d-xl-block ps-2">
+                                <div>Ajeng</div>
+                                <div class="mt-1 small text-secondary">Bidan</div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                            <a href="#" class="dropdown-item">Status</a>
+                            <a href="#" class="dropdown-item">Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="../index.html" class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="navbar-expand-md">
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <div class="navbar">
+                    <div class="container-xl">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/nakes/dashboard.html">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                                            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                                        </svg>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        Home
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/nakes/list-pregnant-mother.html">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-users">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                            <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                            <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                                        </svg>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        Daftar Ibu Hamil
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/nakes/chat.html">
+                                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-message">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M8 9h8" />
+                                            <path d="M8 13h6" />
+                                            <path
+                                                d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
+                                        </svg>
+                                    </span>
+                                    <span class="nav-link-title">
+                                        Chat
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="page-wrapper">
+            <div class="page-header">
+                <div class="container-xl">
+                    <div class="row g-2 align-items-center">
+                        <div class="col">
+                            <div class="page-title">Daftar Ibu Hamil</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page body -->
+            <div class="page-body">
+                <div class="container-xl d-flex flex-column justify-content-center">
+                    <div class="row g-2 mb-3">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Search by name...">
+                        </div>
+                        <div class="col-auto">
+                            <a href="#" class="btn btn-icon" aria-label="Button">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                                    <path d="M21 21l-6 -6"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <table class="table table-vcenter table-mobile-md card-table">
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Alamat Domisili</th>
+                                    <th>No Handphone</th>
+                                    <th>Jadwal ANC</th>
+                                    <th>Status</th>
+                                    <th class="w-1"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Nama">
+                                        <div class="d-flex py-1 align-items-center">
+                                            <span class="avatar avatar-md me-2">
+                                                SR
+                                            </span>
+                                            <div class="flex-fill">
+                                                <div class="font-weight-medium">Siti Ruminah</div>
+                                                <div class="text-secondary">
+                                                    33741234598xxx
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary" data-label="Alamat Domisili">
+                                        <div>JL Sendang Belut Indah No.123 RT 01 RW 03</div>
+                                        <div>Kel.Rowosari, Kec. Tembalang, Kota Semarang</div>
+                                    </td>
+                                    <td data-label="No Handphone">
+                                        <div>081234567891</div>
+                                    </td>
+                                    <td class="text-secondary" data-label="Jadwal ANC">
+                                        <a href="#" class="btn btn-sm px-2 rounded btn-primary d-inline-block"
+                                            data-bs-toggle="modal" data-bs-target="#modal-simple">
+                                            Lihat Jadwal
+                                        </a>
+                                    </td>
+                                    <td class="text-secondary" data-label="Faktor Resiko">
+                                        <button class="btn btn-sm px-2 btn-warning position-relative rounded">Resiko
+                                            Tinggi
+                                            <span class="badge bg-white text-white-fg ms-2">2</span>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <div class="btn-list flex-nowrap">
+                                            <a href="/nakes/check-anc-1.html" class="btn">
+                                                Cek ANC
+                                            </a>
+                                            <a href="/nakes/chat.html" class="btn">
+                                                Chat
+                                            </a>
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle align-text-top"
+                                                    data-bs-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">
+                                                        Action
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Nama">
+                                        <div class="d-flex py-1 align-items-center">
+                                            <span class="avatar avatar-md me-2">
+                                                SR
+                                            </span>
+                                            <div class="flex-fill">
+                                                <div class="font-weight-medium">Siti Ruminah</div>
+                                                <div class="text-secondary">
+                                                    33741234598xxx
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary" data-label="Alamat Domisili">
+                                        <div>JL Sendang Belut Indah No.123 RT 01 RW 03</div>
+                                        <div>Kel.Rowosari, Kec. Tembalang, Kota Semarang</div>
+                                    </td>
+                                    <td data-label="No Handphone">
+                                        <div>081234567891</div>
+                                    </td>
+                                    <td class="text-secondary" data-label="Jadwal ANC">
+                                        <span class="badge bg-danger text-danger-fg">Belum Dijadwalkan</span>
+                                    </td>
+                                    <td class="text-secondary" data-label="Faktor Resiko">
+                                        <button class="btn btn-sm px-2 btn-primary position-relative rounded">Resiko
+                                            Rendah
+                                            <span class="badge bg-white text-white-fg ms-2">1</span>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <div class="btn-list flex-nowrap">
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle align-text-top"
+                                                    data-bs-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">
+                                                        Action
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        Another action
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Nama">
+                                        <div class="d-flex py-1 align-items-center">
+                                            <span class="avatar avatar-md me-2">
+                                                SR
+                                            </span>
+                                            <div class="flex-fill">
+                                                <div class="font-weight-medium">Siti Ruminah</div>
+                                                <div class="text-secondary">
+                                                    33741234598xxx
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary" data-label="Alamat Domisili">
+                                        <div>JL Sendang Belut Indah No.123 RT 01 RW 03</div>
+                                        <div>Kel.Rowosari, Kec. Tembalang, Kota Semarang</div>
+                                    </td>
+                                    <td data-label="No Handphone">
+                                        <div>081234567891</div>
+                                    </td>
+                                    <td class="text-secondary" data-label="Jadwal ANC">
+                                        <span class="badge bg-danger text-danger-fg">Belum Dijadwalkan</span>
+                                    </td>
+                                    <td class="text-secondary" data-label="Faktor Resiko">
+                                        <button class="btn btn-sm px-2 btn-danger position-relative rounded">
+                                            Komplikasi
+                                            <span class="badge bg-white text-white-fg ms-2">1</span>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <div class="btn-list flex-nowrap">
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle align-text-top"
+                                                    data-bs-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">
+                                                        Action
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        Another action
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card align-items-center mt-2">
+                        <ul class="pagination mt-3">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M15 6l-6 6l6 6"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                        <path d="M9 6l6 6l-6 6"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer footer-transparent d-print-none">
+                <div class="container-xl">
+                    <div class="row text-center align-items-center flex-row-reverse">
+                        <div class="col-lg-auto ms-lg-auto">
+                            <ul class="list-inline list-inline-dots mb-0">
+                                <li class="list-inline-item">
+                                    Develop By
+                                    <a href="https://github.com/fauzanagra" target="_blank" class="link-secondary"
+                                        rel="noopener">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-brand-github" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                                        </svg>
+                                        Fauzan Agra
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                            <ul class="list-inline list-inline-dots mb-0">
+                                <li class="list-inline-item">
+                                    Copyright &copy; 2024
+                                    <a href="#" class="link-secondary">
+                                        SEMOCAPP Puskesmas
+                                        Rowosari
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="." class="link-secondary" rel="noopener">
+                                        v1.0.0
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="modal modal-blur fade" id="modal-simple" tabindex="-1" style="display: none;"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">JADWAL ANC - Siti Ruminah</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-vcenter card-table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">Kunjungan</th>
+                                            <th class="text-center">Tanggal</th>
+                                            <th class="text-center">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td>Ke - 1</td>
+                                            <td>16 Februari 2024</td>
+                                            <td><span class="badge bg-green text-green-fg">Sukses</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ke - 2</td>
+                                            <td>16 April 2024</td>
+                                            <td>
+                                                <span class="badge bg-primary text-primary-fg">Proses</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ke - 3</td>
+                                            <td>-</td>
+                                            <td>
+                                                <span class="badge bg-danger text-danger-fg">Belum Terjadwal</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ke - 4</td>
+                                            <td>-</td>
+                                            <td>
+                                                <span class="badge bg-danger text-danger-fg">Belum Terjadwal</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ke - 5</td>
+                                            <td>-</td>
+                                            <td>
+                                                <span class="badge bg-danger text-danger-fg">Belum Terjadwal</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ke - 6</td>
+                                            <td>-</td>
+                                            <td>
+                                                <span class="badge bg-danger text-danger-fg">Belum Terjadwal</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn me-auto" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Libs JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Tabler Core -->
+    <script src="../assets/dist/js/tabler.min.js?1692870487" defer></script>
+    <script src="../assets/dist/js/demo.min.js?1692870487" defer></script>
+</body>
+
+</html>
